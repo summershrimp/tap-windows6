@@ -183,8 +183,7 @@ tapReadCurrentAddress(
     {
         
         if ((ETH_IS_MULTICAST(configAddress)
-                || ETH_IS_BROADCAST(configAddress))
-                || !NIC_ADDR_IS_LOCALLY_ADMINISTERED(configAddress))
+                || ETH_IS_BROADCAST(configAddress)))
         {
             // Address is invalid.
             DEBUGP (("[TAP] --> NetworkAddress in the registry is invalid, using default address.\n"));
